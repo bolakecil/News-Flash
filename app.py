@@ -11,9 +11,6 @@ model = BartForConditionalGeneration.from_pretrained(model_name)
 tokenizer = BartTokenizer.from_pretrained(model_name)
 
 def extract_news_details(url):
-    """
-    Extracts the main content and title of a news article from a given URL.
-    """
     response = requests.get(url)
     soup = BeautifulSoup(response.content, 'html.parser')
 
@@ -30,9 +27,6 @@ def extract_news_details(url):
     }
 
 def summarize_text(text, max_len=200):
-    """
-    Summarizes the given text using DistilBART.
-    """
     inputs = tokenizer.encode("summarize: " + text, return_tensors="pt", max_length=1024, truncation=True)
     summary_ids = model.generate(inputs, max_length=max_len, length_penalty=2.0, num_beams=4, early_stopping=True)
     summary = tokenizer.decode(summary_ids[0], skip_special_tokens=True)
@@ -40,9 +34,6 @@ def summarize_text(text, max_len=200):
     return summary
 
 def summarize_news_from_url(url):
-    """
-    Summarizes news from the given URL and extracts additional details.
-    """
     details = extract_news_details(url)
     content_summary = summarize_text(details['content'])
 
