@@ -27,7 +27,7 @@
 ## Installation
 Due to GitHub's file size restrictions (limit of 100MB per file), the complete package for News Flash is not hosted directly on GitHub. Instead, you can download it using the link provided below:
 
-[Download News Flash Complete Package](https://drive.google.com/file/d/1e7IIrUfC7BYrIqPjC-uzcY5uNDkPK5rk/view?usp=sharing)
+[Download News Flash Complete Package](https://drive.google.com/file/d/1RmNGdRAsrQzkpY03bIRYEu5Id8JoueWL/view?usp=sharing)
 
 ---
 
